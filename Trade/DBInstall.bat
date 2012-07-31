@@ -14,14 +14,14 @@
 :sd
 :scripts_deploy
 	@for %%i in (%DBScriptsPath%\%DB_Scripts_msk%) do @(
-		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.log_out_%~n1.log"
+		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.scripts_out.log"
 	)
 @exit /b 0
 
 :pd
 :procedures_deploy
 	@for %%i in (%DBProceduresPath%\%DB_Procedures_msk%) do @(
-		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.log_out_%~n1.log"
+		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.procedures_out.log"
 	)
 @exit /b 0
 
@@ -50,9 +50,11 @@
 	@if not defined deploy_target_list set deploy_target_list=scripts_deploy procedures_deploy
 @goto :EOF
 
+
 :_i_clean_dirs
 	@if exist "%logsroot%" rd /s /q "%logsroot%" 1>nul 2>&1
 @goto :EOF
+
 
 :_i_create_dirs
 	@if not exist "%logsroot%" md "%logsroot%"
