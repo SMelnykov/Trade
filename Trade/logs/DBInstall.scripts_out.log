@@ -1,0 +1,7 @@
+"31.07.2012 18:07:44,30 -- running script C:\Inspections\My\Task_20120801_Trade\DB\Scripts\20120801_SC_001_CreateDatabase.sql" 
+Database Trade already exists
+"31.07.2012 18:07:44,49 -- Errorlevel 0 -- finished script C:\Inspections\My\Task_20120801_Trade\DB\Scripts\20120801_SC_001_CreateDatabase.sql" 
+"31.07.2012 18:07:44,50 -- running script C:\Inspections\My\Task_20120801_Trade\DB\Scripts\20120801_SC_002_CreateTablesMain.sql" 
+Changed database context to 'Trade'.
+Table Loaded_Ticker already exists
+"31.07.2012 18:07:44,68 -- Errorlevel 0 -- finished script C:\Inspections\My\Task_20120801_Trade\DB\Scripts\20120801_SC_002_CreateTablesMain.sql" 
