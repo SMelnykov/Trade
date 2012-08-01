@@ -14,14 +14,14 @@
 :sd
 :scripts_deploy
 	@for %%i in (%DBScriptsPath%\%DB_Scripts_msk%) do @(
-		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.scripts_out.log"
+		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.scripts_out%%~1.log"
 	)
 @exit /b 0
 
 :pd
 :procedures_deploy
 	@for %%i in (%DBProceduresPath%\%DB_Procedures_msk%) do @(
-		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.procedures_out.log"
+		call :sqlcmd "%SQL_Server_Name%" "%Database_Name%" "%%~dpnxi" "%logsroot%\%~n0.procedures_out%%~1.log"
 	)
 @exit /b 0
 
