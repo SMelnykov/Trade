@@ -24,7 +24,6 @@
 	)
 @exit /b 0
 
-
 @::### Necessary private methods ###
 :_i_set_var
 	@set _tmp_var=%~1
@@ -61,5 +60,3 @@
 
 	@if not exist "%tempfolder%\" md "%tempfolder%\"
 @goto :EOF
-
-
