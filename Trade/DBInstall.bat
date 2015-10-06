@@ -10,7 +10,6 @@
 	@popd
 @exit /b 0
 
-
 :sd
 :scripts_deploy
 	@for %%i in (%DBScriptsPath%\%DB_Scripts_msk%) do @(
